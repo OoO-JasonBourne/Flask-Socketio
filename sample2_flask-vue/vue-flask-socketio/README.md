@@ -12,13 +12,16 @@ npm run serve
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### 配置socketio
 ```
 socketio写在About页面
-在python后端中，需要注意的两个点是 命名空间 namespace 和 事件 event_name
+```
+#### flask-socketio
+需要注意的两个点是 命名空间 namespace 和 事件 event_name
 命名空间相当于一个虚拟路由，在后端中socketio通过emit向前端实时发送数据
 socketio.emit(event_name, {'data': 'data'}, namespace=name_space)
 ```
-
+####socket.io-client
 ```
 在vue中配置socketio有两种用法，一种是在main.js全局配置，另一种在.vue文件中配置
 这里我们选择第二种
